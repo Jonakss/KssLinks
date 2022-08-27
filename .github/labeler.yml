@@ -1,0 +1,15 @@
+docs:
+  - documentation/*
+  - docs/*
+  - doc/*
+ci:
+  - ci/*
+feature:
+  - feat/*
+  - feature/*
+update:
+  - chore/*
+  - update/*
+bugfix:
+  - hotfix/*
+  - bugfix/*
