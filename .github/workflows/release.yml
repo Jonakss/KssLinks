@@ -1,0 +1,25 @@
+# .github/release.yml
+
+changelog:
+  exclude:
+    labels:
+      - skip-notes
+  categories:
+    - title: Features
+      labels:
+        - feat
+        - feature
+    - title: Fixes
+      labels:
+        - bugfix
+        - hotfix
+    - title: DevOps
+      labels:
+        - ci
+    - title: Documentation
+      labels:
+        - docs
+        - documentation
+    - title: Other Changes
+      labels:
+        - "*"
