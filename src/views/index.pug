@@ -5,25 +5,24 @@ head
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous")
 
 body
-    div.container
-        section.row.g-0
-            div.col-md-3
-                figure
-                    img(src='https://dummyimage.com/150x150/000/fff').figure-img.img-fluid.rounded-circle
-            div.col
-                p #[strong #{name}]
-                p desc
-        div.container
-            div.list-group.w-auto
-                each link in links
-                    a(href=link.url).list-group-item.list-group-item-action.d-flex.gap-3.py-3
-                        h1.flex-shrink-0
-                            i.bi.bi-github
-                        div.d-flex.gap-2.w-100.justify-content-between
-                            div
-                                h6.mb-0 #{link.text}
-                                p.mb-0.opacity-75 #{link.url}
-                        
-        footer.footer.mt-auto.py-3.bg-light
-            div.container
-                p.text-muted #[strong KssLinks] by Jonakss
+    div.container.mt-5.mb-5.d-flex.justify-content-center
+        div.card.p-3
+            div.d-flex.align-items-around.mb-3
+                div.image.flex-column.p-2
+                    img(width=155 src='https://dummyimage.com/150x150/000/fff').rounded-circle   
+                div.ml-3.flex-column.p-2.align-self-center
+                    h4.mb-0.mt-0 #{name}
+                    span desc
+            p My links
+            div.p-2.mt-2.bg-primary.d-flex.justify-content-between.rounded.text-white.stats
+                div.group-list.w-100
+                    each link in links
+                        a(href=link.url target="_blank").list-group-item.list-group-item-action.d-flex.gap-2.py-3
+                            div.d-flex.gap-3.w-100.justify-content-around
+                                //img(src='https://github.com/twbs.png').rounded-circle.self-align-center
+                                span.badge.rounded-pill.bg-primary
+                                    span.bi.bi-github
+                                div.flex-grow-1
+                                    h6.mb-0 #{link.text}
+                                    p #{link.url}
+                                small.opacity-50.text-nowrap 3days ago      
