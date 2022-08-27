@@ -5,9 +5,9 @@
   "main": "build/index.js",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
-    "start": "node build/index.js",
+    "start": "NODE_ENV=production node build/index.js",
     "lint": "ts-standard",
-    "tsc": "tsc && tscp",
+    "build": "tsc && tscp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
